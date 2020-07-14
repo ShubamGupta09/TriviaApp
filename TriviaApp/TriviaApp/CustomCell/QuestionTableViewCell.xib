@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="49" id="KGk-i7-Jjw" customClass="QuestionTableViewCell" customModule="TriviaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAB-2s-H4M">
+                        <rect key="frame" x="20" y="14" width="250" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCP-N7-kKM">
+                        <rect key="frame" x="290" y="9" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ZLS-bF-ntG"/>
+                            <constraint firstAttribute="width" constant="30" id="iAR-UO-6Mj"/>
+                        </constraints>
+                        <state key="normal" image="circle"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tCP-N7-kKM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="DuK-K7-4tn"/>
+                    <constraint firstAttribute="trailing" secondItem="tCP-N7-kKM" secondAttribute="trailing" constant="10" id="Ulz-7j-MET"/>
+                    <constraint firstItem="tCP-N7-kKM" firstAttribute="leading" secondItem="TAB-2s-H4M" secondAttribute="trailing" constant="20" id="fVs-T9-l8l"/>
+                    <constraint firstAttribute="bottom" secondItem="TAB-2s-H4M" secondAttribute="bottom" constant="14" id="g1s-Bc-wvF"/>
+                    <constraint firstItem="TAB-2s-H4M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="gJM-TY-cA9"/>
+                    <constraint firstItem="TAB-2s-H4M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="iCl-vR-6VL"/>
+                    <constraint firstAttribute="bottom" secondItem="tCP-N7-kKM" secondAttribute="bottom" constant="10" id="jBg-hq-pbZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnAnswer" destination="tCP-N7-kKM" id="Rjk-VA-6Ep"/>
+                <outlet property="lblOptions" destination="TAB-2s-H4M" id="tlc-vz-MK1"/>
+            </connections>
+            <point key="canvasLocation" x="144.92753623188406" y="111.49553571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" width="30" height="30"/>
+    </resources>
+</document>

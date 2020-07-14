@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d6G-pl-VB5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Details View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsViewController" id="BYZ-38-t0r" customClass="UserDetailsViewController" customModule="TriviaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Trivia App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VO-Y9-5df">
+                                <rect key="frame" x="30" y="158" width="281.5" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-2R-JDA" customClass="BottomLineTextField" customModule="TriviaApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="210.5" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gt1-Iy-GzY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLa-Es-MsH">
+                                <rect key="frame" x="36" y="300.5" width="342" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="n2u-Ry-cRy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnActionSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5s-Xb-b3e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cLa-Es-MsH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="4CM-Bi-4V9"/>
+                            <constraint firstItem="7VO-Y9-5df" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="4Y5-BA-QgG"/>
+                            <constraint firstItem="AsI-2R-JDA" firstAttribute="top" secondItem="7VO-Y9-5df" secondAttribute="bottom" constant="20" id="BtH-k3-cGJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AsI-2R-JDA" secondAttribute="trailing" constant="30" id="PbD-3R-fQX"/>
+                            <constraint firstItem="7VO-Y9-5df" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Sa5-yW-Buz"/>
+                            <constraint firstItem="cLa-Es-MsH" firstAttribute="top" secondItem="AsI-2R-JDA" secondAttribute="bottom" constant="40" id="Xji-L5-1Md"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7VO-Y9-5df" secondAttribute="trailing" constant="30" id="lhR-Sd-lM2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cLa-Es-MsH" secondAttribute="trailing" constant="36" id="nMc-hS-OhJ"/>
+                            <constraint firstItem="AsI-2R-JDA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="x9n-8L-lQo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0Vw-Za-dxN"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnSubmit" destination="cLa-Es-MsH" id="w5W-xF-cuZ"/>
+                        <outlet property="tfName" destination="AsI-2R-JDA" id="anq-GR-veF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="98.4375"/>
+        </scene>
+        <!--Question Table View Controller-->
+        <scene sceneID="F2d-NL-nmZ">
+            <objects>
+                <tableViewController storyboardIdentifier="QuestionTableViewController" id="7Qa-nU-pxS" customClass="QuestionTableViewController" customModule="TriviaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hPV-4e-Ync">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="qVI-Wi-akL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuT-Ww-RUO">
+                                    <rect key="frame" x="50" y="39" width="314" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="g5f-qh-QYb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                    <state key="normal" title="SUBMIT">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnActionSubmit:" destination="7Qa-nU-pxS" eventType="touchUpInside" id="f1Q-XV-Oxv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="uuT-Ww-RUO" firstAttribute="top" secondItem="qVI-Wi-akL" secondAttribute="topMargin" constant="31" id="7vV-Tj-0dh"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="uuT-Ww-RUO" secondAttribute="trailing" constant="42" id="FGP-xj-SSS"/>
+                                <constraint firstItem="uuT-Ww-RUO" firstAttribute="leading" secondItem="qVI-Wi-akL" secondAttribute="leadingMargin" constant="42" id="cPm-Hn-QUC"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="7Qa-nU-pxS" id="iSr-mG-Uys"/>
+                            <outlet property="delegate" destination="7Qa-nU-pxS" id="Mgr-E4-JBL"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="btnSubmit" destination="uuT-Ww-RUO" id="O3w-1Y-TbR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ynd-9T-PDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763.7681159420292" y="97.767857142857139"/>
+        </scene>
+        <!--RESULT-->
+        <scene sceneID="w3P-Qh-qyU">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" title="RESULT" id="lg1-QK-DB4" customClass="ResultViewController" customModule="TriviaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qUd-6Q-C2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-vI-Hmb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="6FQ-Ev-NHE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-7K-fKL">
+                                            <rect key="frame" x="211" y="38" width="177" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="FQD-io-GbO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                            <state key="normal" title="HISTORY">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnActionHistory:" destination="lg1-QK-DB4" eventType="touchUpInside" id="8RY-oa-jgn"/>
+                                                <action selector="btnActionSubmit:" destination="7Qa-nU-pxS" eventType="touchUpInside" id="diI-qC-ed9"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8v4-zt-Gjm">
+                                            <rect key="frame" x="26" y="38" width="177" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="VN9-qc-gyh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                            <state key="normal" title="FINISH">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnActionFinish:" destination="lg1-QK-DB4" eventType="touchUpInside" id="oxh-1P-nDw"/>
+                                                <action selector="btnActionSubmit:" destination="7Qa-nU-pxS" eventType="touchUpInside" id="EFc-BV-JsM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="y1g-7K-fKL" secondAttribute="trailing" constant="26" id="Bp2-GK-9Io"/>
+                                        <constraint firstItem="8v4-zt-Gjm" firstAttribute="width" secondItem="y1g-7K-fKL" secondAttribute="width" id="Rf7-X8-3XO"/>
+                                        <constraint firstItem="y1g-7K-fKL" firstAttribute="leading" secondItem="8v4-zt-Gjm" secondAttribute="trailing" constant="8" id="UDc-5b-xBR"/>
+                                        <constraint firstItem="y1g-7K-fKL" firstAttribute="top" secondItem="6FQ-Ev-NHE" secondAttribute="top" constant="38" id="YGG-lo-xEz"/>
+                                        <constraint firstItem="8v4-zt-Gjm" firstAttribute="top" secondItem="6FQ-Ev-NHE" secondAttribute="top" constant="38" id="exg-eR-IVg"/>
+                                        <constraint firstItem="8v4-zt-Gjm" firstAttribute="leading" secondItem="6FQ-Ev-NHE" secondAttribute="leading" constant="26" id="xkZ-MH-UJN"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2sF-vI-Hmb" firstAttribute="leading" secondItem="9se-Oc-9qt" secondAttribute="leading" id="2fO-Sc-8dw"/>
+                            <constraint firstItem="2sF-vI-Hmb" firstAttribute="trailing" secondItem="9se-Oc-9qt" secondAttribute="trailing" id="AH7-3v-ddb"/>
+                            <constraint firstItem="2sF-vI-Hmb" firstAttribute="top" secondItem="9se-Oc-9qt" secondAttribute="top" id="B8E-fc-Wvp"/>
+                            <constraint firstItem="2sF-vI-Hmb" firstAttribute="trailing" secondItem="9se-Oc-9qt" secondAttribute="trailing" id="N05-oJ-bGM"/>
+                            <constraint firstItem="9se-Oc-9qt" firstAttribute="bottom" secondItem="2sF-vI-Hmb" secondAttribute="bottom" id="RaQ-dq-iCM"/>
+                            <constraint firstItem="2sF-vI-Hmb" firstAttribute="top" secondItem="9se-Oc-9qt" secondAttribute="top" id="erV-et-PmH"/>
+                            <constraint firstItem="2sF-vI-Hmb" firstAttribute="leading" secondItem="9se-Oc-9qt" secondAttribute="leading" id="f2W-3f-Zz0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9se-Oc-9qt"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnFinish" destination="8v4-zt-Gjm" id="muW-Ag-xbI"/>
+                        <outlet property="btnHistory" destination="y1g-7K-fKL" id="ukA-wn-TuE"/>
+                        <outlet property="tableView" destination="2sF-vI-Hmb" id="ZiP-FD-DPF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo2-IE-z4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637.68115942029" y="97.767857142857139"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="dU7-Sa-kuj">
+            <objects>
+                <tableViewController storyboardIdentifier="HistoryTableViewController" title="History" id="6oD-VS-YCI" customClass="HistoryTableViewController" customModule="TriviaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xC0-2N-T6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="6oD-VS-YCI" id="mO8-Ap-pMq"/>
+                            <outlet property="delegate" destination="6oD-VS-YCI" id="Qf9-Ve-3de"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="HISTORY" id="R2n-XM-h8S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g43-gR-dWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3523" y="98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bJS-Cx-aDC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d6G-pl-VB5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L9P-QL-Q4x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="epY-Ge-X6J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ify-3s-jQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </scene>
+    </scenes>
+</document>
